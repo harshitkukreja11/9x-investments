@@ -8,7 +8,7 @@ const slides = [
     title: "Premium Hospitality & Nightlife Investments",
     subtitle: "Iconic brands shaping Dubai’s nightlife scene",
     image:
-      "https://www.mantisdubai.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fclubof4.8e2bf9e0.webp&w=1920&q=75",
+      "https://www.mantisdubai.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fclubone.3ad0288f.webp&w=1920&q=75",
   },
   {
     title: "Strategic Capital for Experience-Led Brands",
