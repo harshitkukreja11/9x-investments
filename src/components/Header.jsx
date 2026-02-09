@@ -5,49 +5,70 @@ import "./Header.css";
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 80);
-    };
+    const onScroll = () => setScrolled(window.scrollY > 80);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const closeMenu = () => setMenuOpen(false);
+
   return (
-    <Navbar
-      expand="lg"
-      fixed="top"
-      className={`main-header ${scrolled ? "scrolled" : ""}`}
-    >
-      <Container>
-        <Navbar.Brand as={NavLink} to="/">
-          9x Investments
-        </Navbar.Brand>
+    <>
+      {/* Backdrop */}
+      <div
+        className={`menu-backdrop ${menuOpen ? "show" : ""}`}
+        onClick={closeMenu}
+      />
 
-        <Navbar.Toggle aria-controls="main-nav" />
+      <Navbar
+        expand="lg"
+        fixed="top"
+        expanded={menuOpen}
+        className={`main-header ${scrolled ? "scrolled" : ""}`}
+      >
+        <Container>
+          <Navbar.Brand as={NavLink} to="/" onClick={closeMenu}>
+            9x Investments
+          </Navbar.Brand>
 
-        <Navbar.Collapse id="main-nav">
-          <Nav className="ms-auto">
-            <NavLink className="nav-link" to="/" end>
-              Home
-            </NavLink>
-            <NavLink className="nav-link" to="/about">
-              About
-            </NavLink>
-            <NavLink className="nav-link" to="/services">
-              Services
-            </NavLink>
-            <NavLink className="nav-link" to="/portfolio">
-              Portfolio
-            </NavLink>
-            <NavLink className="nav-link nav-cta" to="/contact">
-              Contact
-            </NavLink>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+          {/* Animated Hamburger */}
+          <button
+            className={`hamburger ${menuOpen ? "active" : ""}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle navigation"
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+
+          <Navbar.Collapse>
+            <Nav className="ms-auto">
+              {["/", "/about", "/services", "/portfolio", "/contact"].map(
+                (path, i) => (
+                  <NavLink
+                    key={path}
+                    to={path}
+                    end={path === "/"}
+                    className="nav-link"
+                    onClick={closeMenu}
+                    style={{ animationDelay: `${i * 0.08}s` }}
+                  >
+                    {path === "/"
+                      ? "Home"
+                      : path.replace("/", "").charAt(0).toUpperCase() +
+                        path.slice(2)}
+                  </NavLink>
+                )
+              )}
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </>
   );
 }
 

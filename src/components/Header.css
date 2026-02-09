@@ -1,4 +1,7 @@
-/* Base (transparent over hero) */
+/* =========================
+   BASE HEADER
+========================= */
+
 .main-header {
   background: transparent;
   padding: 18px 0;
@@ -6,12 +9,21 @@
   z-index: 999;
 }
 
+.main-header.scrolled {
+  background: #0f172a;
+  padding: 10px 0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+}
+
 .main-header .navbar-brand {
   color: #fff !important;
   font-size: 1.4rem;
   font-weight: 700;
-  letter-spacing: 0.5px;
 }
+
+/* =========================
+   NAV LINKS
+========================= */
 
 .main-header .nav-link {
   color: #fff !important;
@@ -20,7 +32,6 @@
   position: relative;
 }
 
-/* Active link underline */
 .main-header .nav-link.active::after {
   content: "";
   position: absolute;
@@ -31,28 +42,110 @@
   background: #f4b000;
 }
 
-/* CTA */
-.nav-cta {
-  color: #f4b000 !important;
-  font-weight: 600;
+/* =========================
+   HAMBURGER
+========================= */
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  width: 32px;
+  height: 24px;
+  position: relative;
+  z-index: 1100;
 }
 
-/* Scrolled state */
-.main-header.scrolled {
-  background: #0f172a;
-  padding: 10px 0;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+.hamburger span {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #fff;
+  left: 0;
+  transition: all 0.3s ease;
 }
 
-/* Mobile menu */
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 11px; }
+.hamburger span:nth-child(3) { bottom: 0; }
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 11px;
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  bottom: 11px;
+}
+
+/* =========================
+   BACKDROP
+========================= */
+
+.menu-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  z-index: 998;
+}
+
+.menu-backdrop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* =========================
+   MOBILE SLIDE MENU
+========================= */
+
 @media (max-width: 991px) {
+  .hamburger {
+    display: block;
+  }
+
   .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 280px;
     background: #0f172a;
-    padding: 16px;
-    border-radius: 8px;
+    padding: 90px 24px;
+    transform: translateX(-100%);
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 8px 0 30px rgba(0, 0, 0, 0.6);
+  }
+
+  .navbar-collapse.show {
+    transform: translateX(0);
   }
 
   .main-header .nav-link {
-    margin: 10px 0;
+    display: block;
+    margin: 16px 0;
+    font-size: 1.05rem;
+    opacity: 0;
+    transform: translateX(-12px);
+    animation: slideFade 0.4s ease forwards;
+  }
+}
+
+/* =========================
+   LINK ANIMATION
+========================= */
+
+@keyframes slideFade {
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
