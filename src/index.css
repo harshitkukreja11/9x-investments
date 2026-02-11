@@ -126,3 +126,140 @@
     left: 0;
   }
 }
+
+/* =========================
+   SERVICES PAGE
+========================= */
+
+.services-hero {
+  background: linear-gradient(180deg, #020617, #0f172a);
+}
+
+.services-section {
+  background: #020617;
+}
+
+/* Service Cards */
+.service-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+.service-icon {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+/* Service list */
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-list li {
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+}
+
+/* Table */
+.services-table {
+  background: rgba(15, 23, 42, 0.9);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.services-table th {
+  background: #0f172a;
+}
+
+.services-table td,
+.services-table th {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.status-active {
+  color: #f4b000;
+  font-weight: 600;
+}
+
+/* Dark text helper */
+.text-muted-light {
+  color: rgba(255, 255, 255, 0.75);
+}
+/* ===================================
+   FORCE FULL DARK TABLE
+=================================== */
+
+/* Remove Bootstrap white background */
+.activities-table {
+  background-color: #0f172a !important;
+  color: #e2e8f0;
+}
+
+/* Header */
+.activities-table thead {
+  background-color: #111827 !important;
+}
+
+.activities-table thead th {
+  background-color: #111827 !important;
+  color: #38bdf8;
+  border-bottom: 1px solid #334155;
+}
+
+/* Body rows */
+.activities-table tbody tr {
+  background-color: #0f172a !important;
+}
+
+.activities-table tbody td {
+  background-color: #0f172a !important;
+  border-top: 1px solid #1e293b;
+  color: #e2e8f0;
+}
+
+/* Hover effect */
+.activities-table tbody tr:hover {
+  background-color: #1e293b !important;
+  transform: translateX(6px);
+  transition: all 0.3s ease;
+}
+
+/* No results row */
+.activities-table tbody tr td.text-center {
+  background-color: #0f172a !important;
+  color: #94a3b8;
+}
+
+/* Remove default table border */
+.activities-table {
+  border-color: #1e293b !important;
+}
+/* Activity Cell Layout */
+.activity-cell {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 500;
+}
+
+/* Icon Styling */
+.activity-icon {
+  font-size: 18px;
+  color: #38bdf8;
+  min-width: 22px;
+  transition: 0.3s ease;
+}
+
+/* Hover animation */
+.activities-table tbody tr:hover .activity-icon {
+  transform: scale(1.2);
+  color: #f4b000;
+}
+
