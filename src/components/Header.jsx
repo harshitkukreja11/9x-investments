@@ -47,7 +47,7 @@ function Header() {
 
           <Navbar.Collapse>
             <Nav className="ms-auto">
-              {["/", "/about", "/services", "/portfolio", "/contact"].map(
+              {["/", "/about", "/services", "/portfolio","/process", "/contact"].map(
                 (path, i) => (
                   <NavLink
                     key={path}

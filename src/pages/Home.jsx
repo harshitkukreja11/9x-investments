@@ -5,6 +5,7 @@ import SectionHeader from "../components/SectionHeader";
 import PortfolioCard from "../components/PortfolioCard";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import PortfolioMetrics from "../components/PortfolioMetrics";
 
 // Lazy load hero
 const HeroSlider = lazy(() => import("../components/HeroSlider"));
@@ -22,11 +23,15 @@ function Home() {
         <HeroSlider />
       </Suspense>
 
+      {/*metrics*/}
+      <PortfolioMetrics />
+
       {/* QUOTE */}
       <section className="py-4 py-md-5 section-dark" id="home-quote">
         <Container className="text-center">
           <h4 className="fst-italic fs-5 fs-md-4 text-muted">
-            Investing in experiences that define modern luxury
+            We don't just invest in businesses—we invest in<br></br> experiences that bring people together, create lasting memories,<br></br> and define the social fabric of Dubai.<br></br>
+          <p className="muted text-warning">— 9x Investments</p>
           </h4>
         </Container>
       </section>

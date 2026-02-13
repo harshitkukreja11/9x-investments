@@ -263,3 +263,177 @@
   color: #f4b000;
 }
 
+/* ================= PORTFOLIO ================= */
+
+.portfolio-hero {
+  background: linear-gradient(135deg, #0f172a, #0b1120);
+}
+
+.portfolio-section {
+  background: #0f172a;
+}
+
+.alt-bg {
+  background: #111827;
+}
+
+.portfolio-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.portfolio-location {
+  color: #38bdf8;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.portfolio-carousel img {
+  border-radius: 14px;
+  height: 450px;
+  object-fit: cover;
+}
+
+.portfolio-callout {
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.portfolio-callout h6 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.portfolio-callout ul {
+  padding-left: 18px;
+}
+
+.portfolio-contact {
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+.portfolio-btn {
+  background: #f4b000;
+  border: none;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 30px;
+}
+
+.portfolio-btn:hover {
+  background: #ffcc33;
+}
+
+.portfolio-growth {
+  background: linear-gradient(135deg, #0b1120, #0f172a);
+}
+/* ================= PORTFOLIO METRICS ================= */
+
+.portfolio-metrics {
+  background: linear-gradient(135deg, #0b1120, #0f172a);
+}
+
+.metric-card {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 35px 20px;
+  transition: all 0.35s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  border-color: rgba(244, 176, 0, 0.5);
+}
+
+.metric-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f4b000;
+  margin-bottom: 10px;
+}
+
+.metric-label {
+  color: #94a3b8;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ================= INVESTMENT PROCESS ================= */
+
+.process-hero {
+  background: linear-gradient(135deg, #0f172a, #0b1120);
+}
+
+.process-steps {
+  background: #0f172a;
+}
+
+.process-card {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 25px;
+  transition: all 0.35s ease;
+  color: #e2e8f0;
+}
+
+.process-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(244, 176, 0, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.process-number {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f4b000;
+  margin-bottom: 10px;
+}
+
+.process-title {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.process-list {
+  padding-left: 18px;
+  color: #94a3b8;
+}
+
+.process-list li {
+  margin-bottom: 8px;
+}
+
+.process-timeline {
+  background: #111827;
+}
+
+.timeline-box {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 25px;
+}
+
+.timeline-box h5 {
+  color: #f4b000;
+  margin-bottom: 15px;
+}
+
+.timeline-box ul {
+  padding-left: 18px;
+  color: #94a3b8;
+}
+
+.timeline-box li {
+  margin-bottom: 8px;
+}
+
