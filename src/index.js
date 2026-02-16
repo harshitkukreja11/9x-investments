@@ -5,6 +5,7 @@ import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap first
 import "./index.css"; // ✅ YOUR STYLES
 import "./styles/dark-theme.css";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
