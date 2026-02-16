@@ -1,13 +1,7 @@
-import { useState } from "react";
+import React from "react";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-  });
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
